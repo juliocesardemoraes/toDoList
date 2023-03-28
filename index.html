@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1>Notas</h1>
+      <button onclick="showForm()">
+        <img src="./images/plus-solid.svg" />
+      </button>
+    </nav>
+    <main>
+      <section id="todolist">
+        <h2>A fazer</h2>
+      </section>
+      <section id="donelist">
+        <h2>Feito</h2>
+      </section>
+      <section id="cancelledlist">
+        <h2>Cancelado</h2>
+      </section>
+    </main>
+    <form id="addCard" class="card hidden" onsubmit="addCard(event)">
+      <input type="text" id="titulo" placeholder="Titulo" />
+      <textarea
+        name="description"
+        id="description"
+        cols="5"
+        rows="5"
+      ></textarea>
+      <div class="date__holder">
+        <input type="date" />
+        <button type="submit"><img src="./images/plus-solid.svg" /></button>
+      </div>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
