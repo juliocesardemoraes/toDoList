@@ -53,11 +53,15 @@ button {
   transition: 0.5s all;
 }
 
+.button__rotate:hover {
+  transform: rotate(90deg);
+  transition: 0.5s all;
+}
+
 button:hover {
   cursor: pointer;
   border-radius: 50%;
   transition: 0.5s all;
-  transform: rotate(90deg);
 }
 
 button img {
@@ -65,6 +69,8 @@ button img {
   height: 18px;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%)
     contrast(100%);
+
+  transition: 0.5s all;
 }
 
 main {
@@ -79,8 +85,9 @@ nav {
 }
 
 .card {
+  position: relative;
   width: 200px;
-  height: 273px;
+  height: 175px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   color: #222;
@@ -88,6 +95,16 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 1s all;
+}
+
+.extended {
+  height: 250px;
+  transition: 1s all;
+}
+
+.extended p {
+  height: 75px !important;
 }
 
 .card__todo {
@@ -110,4 +127,38 @@ nav {
 .date__holder {
   display: flex;
   justify-content: space-between;
+}
+
+section {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.stickyRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.25rem;
+}
+
+.stickyLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0.25rem;
+}
+
+.info {
+  margin-top: 2rem;
+}
+
+.card p {
+  overflow: clip;
+  word-break: break-all;
+  height: 55px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.5s all;
 }

@@ -13,21 +13,25 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="insertCards(event)">
     <nav>
       <h1>Notas</h1>
-      <button onclick="showForm()">
+      <button class="button__rotate" onclick="showForm()">
         <img src="./images/plus-solid.svg" />
       </button>
     </nav>
     <main>
-      <section id="todolist">
+      <section id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h2>A fazer</h2>
       </section>
-      <section id="donelist">
+      <section id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
         <h2>Feito</h2>
       </section>
-      <section id="cancelledlist">
+      <section
+        id="cancelled"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
         <h2>Cancelado</h2>
       </section>
     </main>
